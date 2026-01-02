@@ -21,7 +21,8 @@
       "Bash(echo:*)",
       "Bash(/Users/zhangsan/Claude-Ally-Health/scripts/test-mens-health.sh)",
       "Bash(./scripts/test-children-health.sh:*)",
-      "Bash(/Users/zhangsan/Claude-Ally-Health/scripts/test-elderly-health.sh:*)"
+      "Bash(/Users/zhangsan/Claude-Ally-Health/scripts/test-elderly-health.sh:*)",
+      "Bash(/Users/zhangsan/Claude-Ally-Health/scripts/test-chronic-diseases.sh:*)"
     ]
   }
 }
