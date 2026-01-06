@@ -24,7 +24,9 @@
       "Bash(/Users/zhangsan/Claude-Ally-Health/scripts/test-elderly-health.sh:*)",
       "Bash(/Users/zhangsan/Claude-Ally-Health/scripts/test-chronic-diseases.sh:*)",
       "Bash(./scripts/test-fitness.sh:*)",
-      "Bash(bash:*)"
+      "Bash(bash:*)",
+      "Bash(test:*)",
+      "Bash(ls:*)"
     ]
   }
 }
