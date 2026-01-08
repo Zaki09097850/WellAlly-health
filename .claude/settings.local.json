@@ -27,7 +27,10 @@
       "Bash(bash:*)",
       "Bash(test:*)",
       "Bash(ls:*)",
-      "Bash(/Users/zhangsan/Claude-Ally-Health/scripts/test-rehabilitation.sh)"
+      "Bash(/Users/zhangsan/Claude-Ally-Health/scripts/test-rehabilitation.sh)",
+      "Bash(/Users/zhangsan/Claude-Ally-Health/scripts/test-family-health.sh:*)",
+      "Bash(./scripts/test-ai-features.sh:*)",
+      "Bash(python3:*)"
     ]
   }
 }

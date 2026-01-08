@@ -1,184 +1,189 @@
-# 个人医疗数据中心 (Personal Health Information System)
+# Claude-Ally-Health - Personal Health Information System
+
+[![English](https://img.shields.io/badge/lang-English-blue.svg)](README.md)
+[![中文](https://img.shields.io/badge/lang-中文-red.svg)](README.zh-CN.md)
 
 [![GitHub stars](https://img.shields.io/github/stars/huifer/Claude-Ally-Health?style=social)](https://github.com/huifer/Claude-Ally-Health)
 [![GitHub forks](https://img.shields.io/github/forks/huifer/Claude-Ally-Health?style=social)](https://github.com/huifer/Claude-Ally-Health)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Star History Chart](https://api.star-history.com/svg?repos=huifer/Claude-Ally-Health&type=date&legend=top-left)](https://www.star-history.com/#huifer/Claude-Ally-Health&type=date&legend=top-left)
 
-基于文件系统的个人医疗健康数据管理系统，使用 Claude Code 命令行工具进行数据管理。
+A file-based personal health data management system using Claude Code CLI tools for data management.
 
 **GitHub**: https://github.com/huifer/Claude-Ally-Health
 
-> Note: 项目使用到 GLM 提供的 mcp__4_5v_mcp__analyze_image 。
-## 项目开发方
+> Note: This project uses GLM's `mcp__4_5v_mcp__analyze_image` for image recognition.
 
-本项目由 [WellAlly Tech](https://www.wellally.tech/) 开发和维护。
+## Project Developer
 
-## 系统特点
+This project is developed and maintained by [WellAlly Tech](https://www.wellally.tech/).
 
-- 📁 纯文件系统存储，无需数据库
-- 🖼️ 支持医疗检查单图片智能识别
-- 📊 自动提取生化检查指标和参考范围
-- 🔍 支持影像检查结构化数据提取
-- 🔪 手术历史记录和植入物管理
-- 📋 出院小结结构化存储
-- 👨‍⚕️ 多学科专家会诊系统（MDT）
-- 🔬 9大专科智能分析
-- ☢️ 医学辐射剂量追踪和管理
-- 💊 **药物相互作用智能检测**（新增）
-- 🚨 **五级严重程度预警系统**（A/B/C/D/X）
-- 👤 用户基础档案管理
-- 💾 本地存储，数据完全私有
-- 🚀 使用 Claude Code 命令操作，无需编程
+## System Features
 
-## 目录结构
+- 📁 Pure file-based storage, no database required
+- 🖼️ Intelligent medical report image recognition
+- 📊 Automatic biochemical test data and reference range extraction
+- 🔍 Structured medical imaging data extraction
+- 🔪 Surgical history and implant management
+- 📋 Structured discharge summary storage
+- 👨‍⚕️ Multi-Disciplinary Team (MDT) consultation system
+- 🔬 13 medical specialist intelligent analysis
+- ☢️ Medical radiation dose tracking and management
+- 💊 **Intelligent drug interaction detection** (New)
+- 🚨 **Five-level severity warning system** (A/B/C/D/X)
+- 👤 User basic profile management
+- 💾 Local storage, completely private data
+- 🚀 Claude Code command operations, no programming required
+
+## Directory Structure
 
 ```
 my-his/
 ├── .claude/
 │   ├── commands/
-│   │   ├── save-report.md    # 保存检查单命令
-│   │   ├── query.md          # 查询记录命令
-│   │   ├── profile.md        # 用户基础参数设置命令
-│   │   ├── radiation.md      # 辐射暴露管理命令
-│   │   ├── surgery.md        # 手术历史记录命令
-│   │   ├── discharge.md      # 出院小结管理命令
-│   │   ├── medication.md     # 用药记录管理命令
-│   │   ├── interaction.md    # 药物相互作用检测命令
-│   │   ├── consult.md        # 多学科专家会诊命令
-│   │   └── specialist.md     # 单专科咨询命令
+│   │   ├── save-report.md    # Save medical report command
+│   │   ├── query.md          # Query records command
+│   │   ├── profile.md        # User profile settings command
+│   │   ├── radiation.md      # Radiation exposure management command
+│   │   ├── surgery.md        # Surgery history record command
+│   │   ├── discharge.md      # Discharge summary management command
+│   │   ├── medication.md     # Medication record management command
+│   │   ├── interaction.md    # Drug interaction detection command
+│   │   ├── consult.md        # Multi-disciplinary consultation command
+│   │   └── specialist.md     # Single specialist consultation command
 │   └── specialists/
-│       ├── cardiology.md            # 心内科专家 Skill
-│       ├── endocrinology.md         # 内分泌科专家 Skill
-│       ├── gastroenterology.md      # 消化科专家 Skill
-│       ├── nephrology.md            # 肾内科专家 Skill
-│       ├── hematology.md            # 血液科专家 Skill
-│       ├── respiratory.md           # 呼吸科专家 Skill
-│       ├── neurology.md             # 神经内科专家 Skill
-│       ├── oncology.md              # 肿瘤科专家 Skill
-│       ├── general.md               # 全科专家 Skill
-│       └── consultation-coordinator.md # 会诊协调器
+│       ├── cardiology.md            # Cardiology specialist Skill
+│       ├── endocrinology.md         # Endocrinology specialist Skill
+│       ├── gastroenterology.md      # Gastroenterology specialist Skill
+│       ├── nephrology.md            # Nephrology specialist Skill
+│       ├── hematology.md            # Hematology specialist Skill
+│       ├── respiratory.md           # Respiratory medicine specialist Skill
+│       ├── neurology.md             # Neurology specialist Skill
+│       ├── oncology.md              # Oncology specialist Skill
+│       ├── general.md               # General practice specialist Skill
+│       └── consultation-coordinator.md # Consultation coordinator
 ├── data/
-│   ├── profile.json          # 用户基础档案
-│   ├── radiation-records.json # 辐射暴露记录
-│   ├── allergies.json        # 过敏史记录
-│   ├── interactions/         # 药物相互作用数据库
-│   │   ├── interaction-db.json      # 相互作用规则主数据库
-│   │   └── interaction-logs/        # 检查历史记录
-│   ├── medications/          # 用药记录数据
-│   ├── 生化检查/             # 生化检验数据
+│   ├── profile.json          # User basic profile
+│   ├── radiation-records.json # Radiation exposure records
+│   ├── allergies.json        # Allergy history records
+│   ├── interactions/         # Drug interaction database
+│   │   ├── interaction-db.json      # Interaction rules main database
+│   │   └── interaction-logs/        # Check history records
+│   ├── medications/          # Medication record data
+│   ├── 生化检查/             # Biochemical test data
 │   │   └── YYYY-MM/
-│   │       └── YYYY-MM-DD_检查项目.json
-│   ├── 影像检查/             # 影像检查数据
+│   │       └── YYYY-MM-DD_test_name.json
+│   ├── 影像检查/             # Medical imaging data
 │   │   └── YYYY-MM/
-│   │       ├── YYYY-MM-DD_检查项目_部位.json
-│   │       └── images/       # 原始图片备份
-│   ├── 手术记录/             # 手术历史数据
+│   │       ├── YYYY-MM-DD_test_name_body_part.json
+│   │       └── images/       # Original image backup
+│   ├── 手术记录/             # Surgery history data
 │   │   └── YYYY-MM/
-│   │       └── YYYY-MM-DD_手术名称.json
-│   ├── 出院小结/             # 出院小结数据
+│   │       └── YYYY-MM-DD_surgery_name.json
+│   ├── 出院小结/             # Discharge summary data
 │   │   └── YYYY-MM/
-│   │       └── YYYY-MM-DD_主要诊断.json
-│   └── index.json            # 全局索引文件
+│   │       └── YYYY-MM-DD_main_diagnosis.json
+│   └── index.json            # Global index file
 └── README.md
 ```
 
-## 快速导航
+## Quick Navigation
 
-- 📖 [完整使用指南](docs/user-guide.md) - 详细的命令使用说明和示例
-- 📋 [数据结构说明](docs/data-structures.md) - JSON 数据格式和字段说明
-- 🔧 [技术实现细节](docs/technical-details.md) - 系统架构和技术细节
-- ⚠️ [安全原则和使用限制](docs/safety-guidelines.md) - 使用安全原则和免责声明
+- 📖 [Complete User Guide](docs/user-guide.md) (Chinese) | [docs/user-guide.en.md](docs/user-guide.en.md) (English) - Detailed command usage instructions and examples
+- 📋 [Data Structure Specification](docs/data-structures.md) (Chinese) | [docs/data-structures.en.md](docs/data-structures.en.md) (English) - JSON data format and field descriptions
+- 🔧 [Technical Implementation Details](docs/technical-details.md) (Chinese) - System architecture and technical details
+- ⚠️ [Safety Guidelines and Usage Limitations](docs/safety-guidelines.md) (Chinese) - Safety principles and disclaimer
 
-## 快速开始
+## Quick Start
 
-1. 确保已安装 Claude Code
-2. 在当前目录打开 Claude Code
-3. 首次使用先设置基础参数：`/profile set 175 70 1990-01-01`
-4. 使用 `/save-report /path/to/image.jpg` 保存第一张检查单
-5. 使用 `/radiation add CT 胸部` 记录辐射检查
-6. 使用 `/surgery 去年8月做了胆囊切除手术，因为胆囊结石` 记录手术历史
-7. 使用 `/discharge @医疗报告/出院小结.jpg` 保存出院小结
-8. 使用 `/query all` 查看所有记录
-9. 使用 `/consult` 启动多学科专家会诊
+1. Ensure Claude Code is installed
+2. Open Claude Code in the current directory
+3. First-time setup: `/profile set 175 70 1990-01-01`
+4. Save first report: `/save-report /path/to/image.jpg`
+5. Record radiation: `/radiation add CT chest`
+6. Record surgery: `/surgery Gallbladder removal surgery in August last year due to gallstones`
+7. Save discharge summary: `/discharge @医疗报告/出院小结.jpg`
+8. Query all records: `/query all`
+9. Start MDT consultation: `/consult`
 
-## 数据隐私
+## Data Privacy
 
-- 所有数据存储在本地文件系统
-- 不上传到任何云端服务
-- 不依赖外部数据库
-- 完全私有化管理
+- All data stored on local filesystem
+- No uploads to any cloud services
+- No external database dependencies
+- Completely private management
 
-## 核心命令一览
+## Core Commands Overview
 
-| 命令 | 功能 | 说明 |
-|------|------|------|
-| `/profile` | 用户基础参数 | 设置身高、体重、出生日期 |
-| `/save-report` | 保存检查单 | 支持生化和影像检查 |
-| `/radiation` | 辐射管理 | 记录和追踪辐射暴露 |
-| `/surgery` | 手术历史 | 记录手术信息和植入物 |
-| `/discharge` | 出院小结 | 保存和结构化出院小结 |
-| `/medication` | 用药管理 | 管理用药计划和记录 |
-| `/interaction` | 相互作用检测 | 检测药物相互作用 |
-| `/allergy` | 过敏史管理 | 记录和管理过敏史 |
-| `/query` | 查询记录 | 多条件查询医疗数据 |
-| `/consult` | 多学科会诊 | 9大专科综合分析 |
-| `/specialist` | 单专科咨询 | 咨询特定专科专家 |
+| Command | Function | Description |
+|---------|----------|-------------|
+| `/profile` | User basic parameters | Set height, weight, birth date |
+| `/save-report` | Save medical report | Support biochemical and imaging tests |
+| `/radiation` | Radiation management | Record and track radiation exposure |
+| `/surgery` | Surgery history | Record surgery information and implants |
+| `/discharge` | Discharge summary | Save and structure discharge summaries |
+| `/medication` | Medication management | Manage medication plans and records |
+| `/interaction` | Interaction detection | Detect drug interactions |
+| `/allergy` | Allergy history management | Record and manage allergy history |
+| `/query` | Query records | Multi-condition medical data queries |
+| `/consult` | Multi-disciplinary consultation | Comprehensive analysis across 13 specialties |
+| `/specialist` | Single specialist consultation | Consult specific specialty experts |
 
-> 💡 详细使用方法请参考 [完整使用指南](docs/user-guide.md)
+> 💡 For detailed usage, refer to [Complete User Guide](docs/user-guide.en.md)
 
-## 技术特点
+## Technical Features
 
-- **存储方式**: JSON 文件 + 文件系统目录结构
-- **命令系统**: Claude Code Slash Commands
-- **专家系统**: 多专科 Skill 定义 + Subagent 架构
-- **会诊协调**: 并行处理 + 意见整合算法
-- **图片识别**: AI 视觉分析
-- **数据提取**: 智能文字识别与结构化
-- **辐射计算**: 体表面积调整 + 指数衰减模型
+- **Storage Method**: JSON files + filesystem directory structure
+- **Command System**: Claude Code Slash Commands
+- **Expert System**: Multi-specialty Skill definitions + Subagent architecture
+- **Consultation Coordination**: Parallel processing + opinion integration algorithms
+- **Image Recognition**: AI visual analysis
+- **Data Extraction**: Intelligent text recognition and structuring
+- **Radiation Calculation**: Body surface area adjustment + exponential decay model
 
-> 🔧 更多技术细节请参考 [技术实现细节](docs/technical-details.md)
+> 🔧 For more technical details, refer to [Technical Implementation Details](docs/technical-details.md) (Chinese)
 
-## ⚠️ 重要安全声明
+## ⚠️ Important Safety Statement
 
-本系统严格遵守医疗安全原则：
+This system strictly follows medical safety principles:
 
-1. **不给出具体用药剂量**
-2. **不直接开具处方药名**
-3. **不判断生死预后**
-4. **不替代医生诊断**
+1. **Does not provide specific medication dosages**
+2. **Does not directly prescribe prescription drugs**
+3. **Does not predict life prognosis**
+4. **Does not replace doctor diagnosis**
 
-本系统所有分析报告仅供参考，不作为医疗诊断依据。所有诊疗决策需咨询专业医生。如有紧急情况，请立即就医。
+All analysis reports from this system are for reference only and should not be used as a basis for medical diagnosis. All medical decisions require consultation with professional doctors. In case of emergency, seek immediate medical attention.
 
-> ⚠️ 完整的安全原则和使用限制请参考 [安全原则文档](docs/safety-guidelines.md)
+> ⚠️ For complete safety principles and usage limitations, refer to [Safety Guidelines Document](docs/safety-guidelines.md) (Chinese)
 
-## 💊 药物相互作用数据库
+## 💊 Drug Interaction Database
 
-系统内置药物相互作用智能检测功能，支持药物-药物、药物-疾病、药物剂量、药物-食物四种类型的相互作用检测，采用五级严重程度分级系统（A/B/C/D/X）。
+The system includes intelligent drug interaction detection, supporting drug-drug, drug-disease, drug-dose, and drug-food interaction detection using a five-level severity classification system (A/B/C/D/X).
 
-**核心功能：**
-- 🔍 自动检测当前用药组合的相互作用
-- 🚨 按严重程度分级预警（A/B/C/D/X）
-- 📋 提供详细的管理建议和监测指标
-- 💾 支持自定义规则和历史记录
+**Core Features:**
+- 🔍 Automatically detect interactions in current medication combinations
+- 🚨 Severity-graded warnings (A/B/C/D/X)
+- 📋 Provide detailed management recommendations and monitoring indicators
+- 💾 Support custom rules and history records
 
-**快速使用：**
+**Quick Start:**
 ```bash
-# 检查当前用药的相互作用
+# Check interactions for current medications
 /interaction check
 
-# 列出所有相互作用规则
+# List all interaction rules
 /interaction list
 
-# 查看绝对禁忌规则
+# View absolute contraindication rules
 /interaction list X
 ```
 
-> 📖 **详细文档**: [药物相互作用数据库完整说明](docs/drug-interaction-database.md)
+> 📖 **Detailed Documentation**: [Drug Interaction Database Complete Guide](docs/drug-interaction-database.md) (Chinese)
 >
-> 🩺 **专业人员贡献**: 欢迎医疗专家帮助完善数据库 → [贡献指南](docs/drug-interaction-database.md#专业人员贡献指南-)
+> 🩺 **Professional Contributions**: Medical professionals are welcome to help improve the database → [Contribution Guidelines](docs/drug-interaction-database.md#专业人员贡献指南-) (Chinese)
 
-## 许可证
+## License
 
-本项目采用 [MIT License](LICENSE) 开源许可证。
+This project is open-sourced under the [MIT License](LICENSE).
 
-**重要声明**: 本系统仅供个人健康管理使用，不作为医疗诊断依据。
+**Important Disclaimer**: This system is for personal health management only and should not be used as a basis for medical diagnosis.
