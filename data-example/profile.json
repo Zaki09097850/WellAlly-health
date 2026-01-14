@@ -2,6 +2,7 @@
   "created_at": null,
   "last_updated": null,
   "basic_info": {
+    "gender": null,
     "height": null,
     "height_unit": "cm",
     "weight": null,

@@ -4,6 +4,9 @@ arguments:
   - name: action
     description: 操作类型：set(设置)/view(查看)
     required: true
+  - name: gender
+    description: 性别（M=男，F=女）
+    required: false
   - name: height
     description: 身高（厘米）
     required: false
@@ -17,7 +20,7 @@ arguments:
 
 # 用户基础参数设置
 
-用于设置或查看用户的基础医疗参数，包括身高、体重和出生日期。
+用于设置或查看用户的基础医疗参数，包括性别、身高、体重和出生日期。
 
 ## 操作类型
 
@@ -26,14 +29,15 @@ arguments:
 设置用户的基础参数，可以重复设置以更新数据。
 
 **参数说明：**
+- `gender`: 性别（M=男性，F=女性）
 - `height`: 身高，单位厘米（cm）
 - `weight`: 体重，单位公斤（kg）
 - `birth_date`: 出生日期，格式 YYYY-MM-DD
 
 **示例：**
 ```
-/profile set 175 70 1990-01-01
-/profile set height=175 weight=70 birth_date=1990-01-01
+/profile set F 175 70 1990-01-01
+/profile set gender=F height=175 weight=70 birth_date=1990-01-01
 ```
 
 ### 2. 查看参数 - `view`
@@ -49,6 +53,7 @@ arguments:
    - 如果文件不存在，创建新文件
 
 2. **验证输入数据**
+   - 检查性别：M、F 或其他有效值
    - 检查身高范围：50-250 cm
    - 检查体重范围：2-300 kg
    - 检查日期格式：YYYY-MM-DD
@@ -69,6 +74,7 @@ arguments:
 
    基本信息：
    ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   性别：F（女）
    身高：175 cm
    体重：70 kg
    出生日期：1990-01-01 (35岁)
@@ -99,6 +105,7 @@ arguments:
   "created_at": "2025-12-31",
   "last_updated": "2025-12-31",
   "basic_info": {
+    "gender": "F",
     "height": 175,
     "height_unit": "cm",
     "weight": 70,
@@ -141,10 +148,10 @@ arguments:
 
 ```
 # 设置完整参数
-/profile set 175 70 1990-01-01
+/profile set F 175 70 1990-01-01
 
 # 使用参数名设置
-/profile set height=180 weight=75 birth_date=1985-06-15
+/profile set gender=M height=180 weight=75 birth_date=1985-06-15
 
 # 只更新体重
 /profile set weight=68
@@ -155,7 +162,7 @@ arguments:
 
 ## 错误处理
 
-- **格式错误**: "参数格式错误，请使用：/profile set 175 70 1990-01-01"
+- **格式错误**: "参数格式错误，请使用：/profile set F 175 70 1990-01-01"
 - **范围错误**: "身高应在50-250cm之间，体重应在2-300kg之间"
 - **日期错误**: "出生日期不能晚于今天"
-- **未设置**: "请先设置基础参数：/profile set 175 70 1990-01-01"
+- **未设置**: "请先设置基础参数：/profile set F 175 70 1990-01-01"

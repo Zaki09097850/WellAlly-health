@@ -100,6 +100,7 @@
 ```json
 {
   "basic_info": {
+    "gender": "F",
     "height": 175,
     "height_unit": "cm",
     "weight": 70,
@@ -118,6 +119,7 @@
 
 ### Field Description
 - `basic_info`: Basic information object
+  - `gender`: Gender (M=Male, F=Female, other values optional)
   - `height`: Height value
   - `height_unit`: Height unit
   - `weight`: Weight value
